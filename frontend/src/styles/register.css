@@ -1,0 +1,144 @@
+/* ===== ESTILOS REGISTRO CLIENTE ===== */
+.register-client-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.register-client-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.register-client-header {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-client-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255,255,255,0.1) 50%,
+    transparent 100%
+  );
+  animation: shine 3s ease-in-out infinite;
+}
+
+.register-client-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.register-client-header h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.register-client-header p {
+  opacity: 0.9;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 2;
+}
+
+.register-client-body {
+  padding: 2rem;
+}
+
+.btn-register-client {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-register-client::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn-register-client:hover::before {
+  left: 100%;
+}
+
+.btn-register-client:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(45, 90, 160, 0.4);
+}
+
+.login-link-client {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+}
+
+.login-link-client a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link-client a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .register-client-container {
+    padding: 10px;
+  }
+  
+  .register-client-header {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .register-client-body {
+    padding: 1.5rem;
+  }
+  
+  .register-client-icon {
+    font-size: 2.5rem;
+  }
+}

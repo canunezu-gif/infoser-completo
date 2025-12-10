@@ -1,0 +1,16 @@
+# Node / React
+node_modules/
+dist/
+build/
+
+# Entornos / secretos
+.env
+frontend/.env
+backend/.env
+
+# Python (ml-service y otros)
+venv/
+ml-service/venv/
+**/__pycache__/
+*.pyc
+infoser_ep_spa.dump

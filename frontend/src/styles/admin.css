@@ -1,0 +1,179 @@
+/* ===== ESTILOS PANEL ADMINISTRADOR ===== */
+:root {
+  --primary-blue: #1a365d;
+  --secondary-blue: #2d5aa0;
+  --accent-blue: #3182ce;
+  --dark-gray: #2d3748;
+  --medium-gray: #4a5568;
+  --light-gray: #e2e8f0;
+  --white: #ffffff;
+}
+
+.admin-menu-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.admin-menu-header {
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-menu-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.welcome-section h2 {
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+  color: var(--medium-gray);
+  font-size: 1.1rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.menu-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-color: var(--accent-blue);
+}
+
+.menu-icon {
+  font-size: 2.5rem;
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+}
+
+.menu-card h3 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.menu-card p {
+  color: var(--medium-gray);
+  line-height: 1.5;
+}
+
+.menu-arrow {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: var(--accent-blue);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-card:hover .menu-arrow {
+  opacity: 1;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.badge-low {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #2ecc71;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.badge-medium {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #f1c40f;
+  color: #000;
+  font-size: 0.85rem;
+}
+
+.badge-high {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.badge-neutral {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #bdc3c7;
+  color: #2c3e50;
+  font-size: 0.85rem;
+}
+/* --- INFOSER ML --- */
+.menu-card h3, .menu-card h4 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.admin-menu-header .header-content h1 {
+  color: #0f172a;
+}
+.admin-menu-container {
+  background: #f6f8fc;
+}

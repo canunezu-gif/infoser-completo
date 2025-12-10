@@ -1,0 +1,266 @@
+/* ===== VARIABLES ===== */
+:root {
+  --primary-blue: #1a365d;
+  --secondary-blue: #2d5aa0;
+  --accent-blue: #3182ce;
+  --dark-gray: #2d3748;
+  --medium-gray: #4a5568;
+  --light-gray: #e2e8f0;
+  --white: #ffffff;
+}
+
+/* ===== ESTILOS ESPECÍFICOS LOGIN CLIENTE ===== */
+.login-client-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.login-client-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.login-client-header {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-client-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255,255,255,0.1) 50%,
+    transparent 100%
+  );
+  animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.login-client-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.login-client-header h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.login-client-header p {
+  opacity: 0.9;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 2;
+}
+
+.login-client-body {
+  padding: 2rem;
+}
+
+.form-group-client {
+  margin-bottom: 1.5rem;
+}
+
+.form-label-client {
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.form-control-client {
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-family: inherit;
+}
+
+.form-control-client:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+  outline: none;
+}
+
+.forgot-password-client {
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 1rem;
+}
+
+.forgot-password-client a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.forgot-password-client a:hover {
+  text-decoration: underline;
+}
+
+.btn-login-client {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-login-client::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn-login-client:hover::before {
+  left: 100%;
+}
+
+.btn-login-client:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(45, 90, 160, 0.4);
+}
+
+.btn-login-client:active {
+  transform: translateY(0);
+}
+
+.register-link-client {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+}
+
+.register-link-client a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link-client a:hover {
+  text-decoration: underline;
+}
+
+.demo-credentials-client {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.alert-info-client {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  padding: 10px 15px;
+  color: var(--medium-gray);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-client-container {
+    padding: 10px;
+  }
+  
+  .login-client-header {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .login-client-body {
+    padding: 1.5rem;
+  }
+  
+  .login-client-icon {
+    font-size: 2.5rem;
+  }
+
+}
+/* Estilos para el indicador de backend */
+.backend-status {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.backend-status.online {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.backend-status.offline {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.backend-info {
+  padding: 6px;
+  border-radius: 4px;
+  margin-top: 5px;
+  font-size: 0.85em;
+}
+
+.backend-info.online {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.backend-info.offline {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Mejora visual para el estado de carga */
+.btn-login-client:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
